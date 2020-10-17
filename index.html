@@ -3,7 +3,7 @@
 Created using JS Bin
 http://bin.webduino.io
 
-Copyright (c) 2020 by anonymous (http://bin.webduino.io/vibaw/1/edit)
+Copyright (c) 2020 by anonymous (http://bin.webduino.io/tixiv/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
@@ -22,47 +22,17 @@ Released under the MIT license: http://jsbin.mit-license.org
   <script src="https://bit.webduino.io/blockly/dist/lib/runtime.min.js"></script>
   <script src="https://bit.webduino.io/blockly/components/webduino-bit-module-led-matrix/BitLedMatrix-blockly.js"></script>
   <script src="https://bit.webduino.io/blockly/components/webduino-bit-module-led-matrix/BitLedMatrix.js"></script>
-<style id="jsbin-css">
-.db5 {
-  font-size: 24px;
-  outline: none;
-  margin: 0 10px 10px 0;
-  pointer-events: auto!important;
-}
-
-button:hover {
-  box-shadow: 2px 2px 5px #888;
-}
-</style>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <h1>冷氣開關</h1>
-  <div><button id="demo-area-05-btn1" class="db5">按鈕 1</button>
+  <h1>林家</h1>
+  <div><button id="demo-area-05-btn1" class="btn btn-primary">按鈕 1</button>
+    <button id="demo-area-05-btn1" class="btn btn-primary">按鈕 2</button>
+    <button id="demo-area-05-btn1" class="btn btn-primary">按鈕 3</button>
+       <button id="demo-area-05-btn1" class="btn btn-primary">按鈕 4</button>
     
-<script id="jsbin-javascript">
-var matrix;
-
-
-boardReady({board: 'Bit', device: '7A4fLJtLei7XCYktab', transport: 'mqtt'}, function (board) {
-  board.samplingInterval = 250;
-  matrix = getMatrix(board, 4, 25);
-  document.getElementById("demo-area-05-btn1").addEventListener("click",function(){
-    matrix.setColor('#ff0000');
-  });
-  document.getElementById("demo-area-05-btn2").addEventListener("click",function(){
-    matrix.setColor('#ffff33');
-  });
-  document.getElementById("demo-area-05-btn3").addEventListener("click",function(){
-    matrix.setColor('#006600');
-  });
-  document.getElementById("demo-area-05-btn4").addEventListener("click",function(){
-    matrix.setColor('#33ccff');
-  });
-  document.getElementById("demo-area-05-btn5").addEventListener("click",function(){
-    matrix.setColor('#cc66cc');
-  });
-});
-
-</script>
 </body>
